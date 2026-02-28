@@ -1,5 +1,6 @@
 # FULL_ADDER_SUBTRACTOR
-
+DEVELOPED BY P.DHARSHINI.
+REGISTER NUMBER:25010127.
 Implementation-of-Full-Adder-and-Full-subtractor-circuit
 
 **AIM:**
@@ -37,19 +38,57 @@ Diff = A ⊕ B ⊕ Bin
 Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
+<img width="861" height="501" alt="image" src="https://github.com/user-attachments/assets/63ad0767-1f95-42e0-b06c-67fc9ce501bb" />
+
 
 **Procedure**
 
 Write the detailed procedure here
+1.Create a new project in Quartus II and open a Block Diagram/Schematic file.
+2.Place logic symbols and connect inputs A, B, Cin and outputs Sum, Cout for full adder;inputs A,Bin and outputs diff ,borrow out for full subtractor.
+3.Implement logic: Sum = A ⊕ B ⊕ Cin, Cout = AB + Cin(A ⊕ B); Diff = A ⊕ B ⊕ Bin ,Borrow out = A'Bin + A'B + BBin.
+4.Compile and simulate to verify the output waveform.
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
+Developed by:P.Dharshini
+RegisterNumber:25010127
 */
+FULL ADDER:
+```
+module exp_3a(A,B,C,sum,carry);
+input A,B,C;
+output sum,carry;
+assign sum=A^B^C;
+assign carry=((A&B)|(A&C)|(B&C));
+endmodule
+```
+FULL SUBTRACTOR:
+```
+module exp_3b(A,B,C,dif,bor);
+input A,B,C;
+output dif,bor;
+assign dif=A^B^C;
+assign bor=(~A&C)|(~A&B)|(B&C);
+endmodule
+```
 
 **RTL Schematic**
+FULL ADDER:
+<img width="1920" height="1080" alt="Screenshot (580)" src="https://github.com/user-attachments/assets/73601607-bd08-45f3-9ca9-e71aa3e8c8b4" />
+FULL SUBTRACTOR:
+<img width="1920" height="1080" alt="Screenshot (582)" src="https://github.com/user-attachments/assets/9d8585d0-9cfa-4654-bc24-cc81ceecff8a" />
+
+
 
 **Output Timing Waveform**
+FULL ADDER:
+<img width="1920" height="1080" alt="Screenshot (581)" src="https://github.com/user-attachments/assets/4c8d001a-7067-4395-8986-576954309eaf" />
+FULL SUBTRACTOR:
+<img width="1920" height="1080" alt="Screenshot (583)" src="https://github.com/user-attachments/assets/9a1f5765-b5cc-4869-871c-4dbb5317ee6d" />
+
+
 
 **Result:**
 
