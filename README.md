@@ -1,6 +1,8 @@
 # FULL_ADDER_SUBTRACTOR
+
 DEVELOPED BY P.DHARSHINI.
 REGISTER NUMBER:25010127.
+
 Implementation-of-Full-Adder-and-Full-subtractor-circuit
 
 **AIM:**
@@ -52,9 +54,12 @@ Write the detailed procedure here
 **Program:**
 
 /* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
+
 Developed by:P.Dharshini
 RegisterNumber:25010127
+
 */
+
 FULL ADDER:
 ```
 module exp_3a(A,B,C,sum,carry);
